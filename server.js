@@ -7,19 +7,6 @@ app.use(express.json());
 
 app.listen(port, () => {console.log(`Server rodando na porta: ${port}`)})
 
-let senhas={
-    itens:[]
-}
-
-function carregar(){
-  let dadosalvo = localStorage.getItem("Nsenhas");
-if(dadosalvo){
-  compras = JSON.parse(dadosalvo);
-}
-    renderizar();
-}
-
-
 app.post('/cripto', async function cripto(req, res){
  try {
     const { senha } = req.body;
